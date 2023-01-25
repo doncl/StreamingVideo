@@ -156,7 +156,6 @@ extension ViewController.PlayerView {
                     self.playerLayer.player = playr
                     self.player = playr
                     
-                    
                     self.playerItemObserver = playerItem.observe(\AVPlayerItem.status, options: [.new, .old]) { [weak self] _,_ in
                         guard let self = self else { return }
                         guard playerItem.status == .readyToPlay else {
