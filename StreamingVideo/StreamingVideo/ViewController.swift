@@ -77,6 +77,10 @@ extension ViewController {
             fatalError("init(coder:) has not been implemented")
         }
         
+        deinit {
+            playerItemObserver = nil
+        }
+        
         override func layoutSubviews() {
             super.layoutSubviews()
 
