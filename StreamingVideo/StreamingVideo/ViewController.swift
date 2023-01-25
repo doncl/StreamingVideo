@@ -165,9 +165,9 @@ extension ViewController.PlayerView {
                         guard playerItem.status == .readyToPlay else {
                             return
                         }
-                        let period = CMTime(seconds: 5.0, preferredTimescale: 2)
+                        let period = CMTime(seconds: 0.5, preferredTimescale: 2)
                         self.addPeriodicTimeObserver(withInterval: period) { seconds in
-                            let formattedString = String(format: "%.0f", seconds)
+                            let formattedString = String(format: "%.02f", seconds)
                             print("\(#function) - \(formattedString) seconds of video playback elapsed.")
                         }
 
